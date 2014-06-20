@@ -9,9 +9,7 @@ import org.joda.time.DateTime;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Story {
-	Integer id;
-
+public class Story extends ModelBase {
 	@JsonProperty("project_id")
 	Integer projectId;
 
@@ -47,12 +45,6 @@ public class Story {
 	@JsonProperty("comment_ids")
 	List<Integer> commentIds;
 
-	@JsonProperty("created_at")
-	DateTime createdAt;
-
-	@JsonProperty("updated_at")
-	DateTime updatedAt;
-
 	@JsonProperty("integration_id")
 	Integer integrationId;
 
@@ -62,14 +54,6 @@ public class Story {
 	String url;
 
 	String kind;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public Integer getProjectId() {
 		return projectId;
@@ -173,22 +157,6 @@ public class Story {
 
 	public void setCommentIds(List<Integer> commentIds) {
 		this.commentIds = commentIds;
-	}
-
-	public DateTime getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(DateTime createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public DateTime getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(DateTime updatedAt) {
-		this.updatedAt = updatedAt;
 	}
 
 	public Integer getIntegrationId() {
