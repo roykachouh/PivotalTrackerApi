@@ -2,58 +2,30 @@
 package com.asc.tracker.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.joda.time.DateTime;
 
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude ( JsonInclude.Include.NON_NULL )
 public class Story extends ModelBase {
-	@JsonProperty("project_id")
 	Integer projectId;
-
 	String name;
-
 	String description;
-
-	@JsonProperty("story_type")
 	StoryType storyType;
-
-	@JsonProperty("current_state")
 	CurrentState currentState;
-
 	Float estimate;
-
-	@JsonProperty("accepted_at")
 	DateTime acceptedAt;
-
 	DateTime deadline;
-
-	@JsonProperty("requested_by_id")
 	Integer requestedById;
-
-	@JsonProperty("owner_ids")
 	List<Integer> ownerIds;
-
-	@JsonProperty("task_ids")
 	List<Integer> taskIds;
-
-	@JsonProperty("follower_ids")
 	List<Integer> followerIds;
-
-	@JsonProperty("comment_ids")
 	List<Integer> commentIds;
-
-	@JsonProperty("integration_id")
 	Integer integrationId;
-
-	@JsonProperty("external_id")
 	String externalId;
-
 	String url;
 
-	String kind;
 
 	public Integer getProjectId() {
 		return projectId;
@@ -183,18 +155,10 @@ public class Story extends ModelBase {
 		this.url = url;
 	}
 
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
-
 	@Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this);
-    }
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
 
 
 }

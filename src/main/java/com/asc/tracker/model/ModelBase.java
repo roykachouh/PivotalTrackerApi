@@ -1,6 +1,5 @@
 package com.asc.tracker.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.joda.time.DateTime;
 
@@ -12,10 +11,9 @@ import java.io.Serializable;
 public class ModelBase implements Serializable {
 
 	Integer id;
-	@JsonProperty ("created_at")
 	DateTime createdAt;
-	@JsonProperty("updated_at")
 	DateTime updatedAt;
+	String kind;
 
 	public Integer getId() {
 		return id;
@@ -44,5 +42,13 @@ public class ModelBase implements Serializable {
 	@Override
 	public String toString() {
 		return ToStringBuilder.reflectionToString(this);
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
 	}
 }

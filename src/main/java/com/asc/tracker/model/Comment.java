@@ -1,38 +1,20 @@
-
 package com.asc.tracker.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude ( JsonInclude.Include.NON_NULL )
 public class Comment extends ModelBase {
 
-	@JsonProperty("story_id")
 	Integer storyId;
-
-	@JsonProperty("epic_id")
 	Integer epicId;
-
 	String text;
-
-	@JsonProperty("person_id")
 	Integer personId;
-
-	@JsonProperty("file_attachment_ids")
 	List<Integer> fileAttachmentIds;
-
-	@JsonProperty("google_attachment_ids")
 	List<Integer> googleAttachmentIds;
-
-	@JsonProperty("comment_identifier")
 	String commentIdentifier;
-
-	@JsonProperty("commit_type")
 	String commitType;
-
-	String kind;
 
 	public Integer getStoryId() {
 		return storyId;
@@ -98,11 +80,4 @@ public class Comment extends ModelBase {
 		this.commitType = commitType;
 	}
 
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
 }
