@@ -1,5 +1,9 @@
 package com.asc.tracker.model;
 
+import com.asc.tracker.serializer.CustomDateSerializer;
+import com.asc.tracker.serializer.JSONSerializer;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.joda.time.DateTime;
 
@@ -8,7 +12,7 @@ import java.io.Serializable;
 /**
  * Created by kachouh on 6/19/14.
  */
-public class ModelBase implements Serializable {
+public abstract class ModelBase implements Serializable {
 
 	Integer id;
 	DateTime createdAt;
@@ -23,6 +27,7 @@ public class ModelBase implements Serializable {
 		this.id = id;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public DateTime getCreatedAt() {
 		return createdAt;
 	}
@@ -31,6 +36,7 @@ public class ModelBase implements Serializable {
 		this.createdAt = createdAt;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public DateTime getUpdatedAt() {
 		return updatedAt;
 	}
@@ -51,4 +57,8 @@ public class ModelBase implements Serializable {
 	public void setKind(String kind) {
 		this.kind = kind;
 	}
+
+	String toJson() throws JsonProcessingException {
+		return new JSONSerializer<>().write(this);
+	};
 }

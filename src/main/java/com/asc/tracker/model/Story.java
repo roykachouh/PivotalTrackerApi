@@ -1,10 +1,13 @@
 
 package com.asc.tracker.model;
 
+import com.asc.tracker.serializer.CustomDateSerializer;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.joda.time.DateTime;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @JsonInclude ( JsonInclude.Include.NON_NULL )
@@ -14,7 +17,7 @@ public class Story extends ModelBase {
 	String description;
 	StoryType storyType;
 	CurrentState currentState;
-	Float estimate;
+	BigDecimal estimate;
 	DateTime acceptedAt;
 	DateTime deadline;
 	Integer requestedById;
@@ -22,10 +25,30 @@ public class Story extends ModelBase {
 	List<Integer> taskIds;
 	List<Integer> followerIds;
 	List<Integer> commentIds;
+	List<Integer> labelIds;
 	Integer integrationId;
 	String externalId;
 	String url;
 
+	public Story(Integer projectId, String name, String description, StoryType storyType, CurrentState currentState, BigDecimal estimate, DateTime acceptedAt, DateTime deadline, Integer requestedById, List<Integer> ownerIds, List<Integer> taskIds, List<Integer> followerIds, List<Integer> commentIds, List<Integer> labelIds, Integer integrationId, String externalId, String url) {
+		this.projectId = projectId;
+		this.name = name;
+		this.description = description;
+		this.storyType = storyType;
+		this.currentState = currentState;
+		this.estimate = estimate;
+		this.acceptedAt = acceptedAt;
+		this.deadline = deadline;
+		this.requestedById = requestedById;
+		this.ownerIds = ownerIds;
+		this.taskIds = taskIds;
+		this.followerIds = followerIds;
+		this.commentIds = commentIds;
+		this.labelIds = labelIds;
+		this.integrationId = integrationId;
+		this.externalId = externalId;
+		this.url = url;
+	}
 
 	public Integer getProjectId() {
 		return projectId;
@@ -67,14 +90,15 @@ public class Story extends ModelBase {
 		this.currentState = currentState;
 	}
 
-	public Float getEstimate() {
+	public BigDecimal getEstimate() {
 		return estimate;
 	}
 
-	public void setEstimate(Float estimate) {
+	public void setEstimate(BigDecimal estimate) {
 		this.estimate = estimate;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public DateTime getAcceptedAt() {
 		return acceptedAt;
 	}
@@ -83,6 +107,7 @@ public class Story extends ModelBase {
 		this.acceptedAt = acceptedAt;
 	}
 
+	@JsonSerialize (using = CustomDateSerializer.class)
 	public DateTime getDeadline() {
 		return deadline;
 	}

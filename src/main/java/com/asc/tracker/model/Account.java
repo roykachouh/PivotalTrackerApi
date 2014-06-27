@@ -8,15 +8,27 @@ import java.util.List;
  * Created by kachouh on 6/20/14.
  */
 public class Account extends ModelBase {
-	String name;
-	String plan;
-	AccountStatus status;
-	Integer daysLeft;
-	Boolean overTheLimit;
-	DateTime createdAt;
-	DateTime updatedAt;
-	List<Integer> projectIds;
+	private String name;
+	private String plan;
+	private AccountStatus status;
+	private Integer daysLeft;
+	private Boolean overTheLimit;
+	private DateTime createdAt;
+	private DateTime updatedAt;
+	private List<Integer> projectIds;
 
+	public Account(){}
+
+	public Account(String name, String plan, AccountStatus status, Integer daysLeft, Boolean overTheLimit, DateTime createdAt, DateTime updatedAt, List<Integer> projectIds) {
+		this.name = name;
+		this.plan = plan;
+		this.status = status;
+		this.daysLeft = daysLeft;
+		this.overTheLimit = overTheLimit;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+		this.projectIds = projectIds;
+	}
 
 	public String getName() {
 		return name;
