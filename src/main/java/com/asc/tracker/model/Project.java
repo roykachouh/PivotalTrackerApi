@@ -1,8 +1,10 @@
 
 package com.asc.tracker.model;
 
+import com.asc.tracker.serializer.CustomDateSerializer;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.joda.time.DateTime;
 
@@ -45,6 +47,40 @@ public class Project extends ModelBase {
 	List<Integer> integrationIds;
 	List<Integer> iterationOverrideNumbers;
 
+
+	public Project(String name, Integer version, Integer iterationLength, WeekStartDay weekStartDay, String pointScale, Boolean pointScaleIsCustom, Boolean bugsAndChoresAreEstimatable, Boolean automaticPlanning, Boolean enableTasks, DateTime startDate, TimeZone timeZone, Integer velocityAveragedOver, DateTime shownIterationsStartTime, DateTime startTime, Integer numberOfDoneIterationsToShow, Boolean hasGoogleDomain, String description, String profileContent, Boolean enableIncomingEmails, Integer initialVelocity, Boolean projectPublic, Boolean atomEnabled, Integer currentIterationNumber, Integer currentVelocity, Integer accountId, List<Integer> storyIds, List<Integer> epicIds, List<Integer> membershipIds, List<Integer> labelIds, List<Integer> integrationIds, List<Integer> iterationOverrideNumbers) {
+		this.name = name;
+		this.version = version;
+		this.iterationLength = iterationLength;
+		this.weekStartDay = weekStartDay;
+		this.pointScale = pointScale;
+		this.pointScaleIsCustom = pointScaleIsCustom;
+		this.bugsAndChoresAreEstimatable = bugsAndChoresAreEstimatable;
+		this.automaticPlanning = automaticPlanning;
+		this.enableTasks = enableTasks;
+		this.startDate = startDate;
+		this.timeZone = timeZone;
+		this.velocityAveragedOver = velocityAveragedOver;
+		this.shownIterationsStartTime = shownIterationsStartTime;
+		this.startTime = startTime;
+		this.numberOfDoneIterationsToShow = numberOfDoneIterationsToShow;
+		this.hasGoogleDomain = hasGoogleDomain;
+		this.description = description;
+		this.profileContent = profileContent;
+		this.enableIncomingEmails = enableIncomingEmails;
+		this.initialVelocity = initialVelocity;
+		this.projectPublic = projectPublic;
+		this.atomEnabled = atomEnabled;
+		this.currentIterationNumber = currentIterationNumber;
+		this.currentVelocity = currentVelocity;
+		this.accountId = accountId;
+		this.storyIds = storyIds;
+		this.epicIds = epicIds;
+		this.membershipIds = membershipIds;
+		this.labelIds = labelIds;
+		this.integrationIds = integrationIds;
+		this.iterationOverrideNumbers = iterationOverrideNumbers;
+	}
 
 	public String getName() {
 		return name;
@@ -118,6 +154,7 @@ public class Project extends ModelBase {
 		this.enableTasks = enableTasks;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public DateTime getStartDate() {
 		return startDate;
 	}
@@ -142,6 +179,7 @@ public class Project extends ModelBase {
 		this.velocityAveragedOver = velocityAveragedOver;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public DateTime getShownIterationsStartTime() {
 		return shownIterationsStartTime;
 	}
@@ -150,6 +188,7 @@ public class Project extends ModelBase {
 		this.shownIterationsStartTime = shownIterationsStartTime;
 	}
 
+	@JsonSerialize (using = CustomDateSerializer.class)
 	public DateTime getStartTime() {
 		return startTime;
 	}
