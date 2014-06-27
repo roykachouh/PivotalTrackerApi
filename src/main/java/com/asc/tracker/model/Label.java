@@ -11,6 +11,11 @@ public class Label extends ModelBase {
 	@NotNull
 	String name;
 
+	public Label(Integer projectId, String name) {
+		this.projectId = projectId;
+		this.name = name;
+	}
+
 	public Integer getProjectId() {
 		return projectId;
 	}
