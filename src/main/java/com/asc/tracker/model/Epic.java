@@ -12,6 +12,19 @@ public class Epic extends ModelBase {
 	String description;
 	List<Integer> commentIds;
 	List<Integer> followerIds;
+
+	public Epic(Integer projectId, String name, Integer labelId, String description, List<Integer> commentIds, List<Integer> followerIds, Integer afterId, Integer beforeId, String url) {
+		this.projectId = projectId;
+		this.name = name;
+		this.labelId = labelId;
+		this.description = description;
+		this.commentIds = commentIds;
+		this.followerIds = followerIds;
+		this.afterId = afterId;
+		this.beforeId = beforeId;
+		this.url = url;
+	}
+
 	Integer afterId;
 	Integer beforeId;
 	String url;
