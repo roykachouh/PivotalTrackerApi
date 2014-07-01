@@ -16,6 +16,20 @@ public class FileAttachment extends ModelBase {
 	String bigUrl;
 	String thumbnailUrl;
 
+	public FileAttachment(String filename, Integer uploaderId, Boolean thumbnailable, Integer height, Integer width, Integer size, String downloadUrl, String contentType, Boolean uploaded, String bigUrl, String thumbnailUrl) {
+		this.filename = filename;
+		this.uploaderId = uploaderId;
+		this.thumbnailable = thumbnailable;
+		this.height = height;
+		this.width = width;
+		this.size = size;
+		this.downloadUrl = downloadUrl;
+		this.contentType = contentType;
+		this.uploaded = uploaded;
+		this.bigUrl = bigUrl;
+		this.thumbnailUrl = thumbnailUrl;
+	}
+
 	public String getFilename() {
 		return filename;
 	}
