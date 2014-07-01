@@ -12,6 +12,16 @@ public class GoogleAttachment extends ModelBase {
 	String alternateLink;
 	String resourceId;
 
+	public GoogleAttachment(Integer commentId, Integer personId, String googleKind, String title, String googleId, String alternateLink, String resourceId) {
+		this.commentId = commentId;
+		this.personId = personId;
+		this.googleKind = googleKind;
+		this.title = title;
+		this.googleId = googleId;
+		this.alternateLink = alternateLink;
+		this.resourceId = resourceId;
+	}
+
 	public Integer getCommentId() {
 		return commentId;
 	}
