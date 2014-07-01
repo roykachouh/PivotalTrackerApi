@@ -9,6 +9,13 @@ public class Task extends ModelBase {
 	Boolean complete;
 	Integer position;
 
+	public Task(Integer storyId, String description, Boolean complete, Integer position) {
+		this.storyId = storyId;
+		this.description = description;
+		this.complete = complete;
+		this.position = position;
+	}
+
 	public Integer getStoryId() {
 		return storyId;
 	}
