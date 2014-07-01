@@ -16,6 +16,17 @@ public class Comment extends ModelBase {
 	String commentIdentifier;
 	String commitType;
 
+	public Comment(Integer storyId, Integer epicId, String text, Integer personId, List<Integer> fileAttachmentIds, List<Integer> googleAttachmentIds, String commentIdentifier, String commitType) {
+		this.storyId = storyId;
+		this.epicId = epicId;
+		this.text = text;
+		this.personId = personId;
+		this.fileAttachmentIds = fileAttachmentIds;
+		this.googleAttachmentIds = googleAttachmentIds;
+		this.commentIdentifier = commentIdentifier;
+		this.commitType = commitType;
+	}
+
 	public Integer getStoryId() {
 		return storyId;
 	}
