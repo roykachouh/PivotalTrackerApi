@@ -1,5 +1,7 @@
 package com.asc.tracker.model;
 
+import com.asc.tracker.serializer.CustomDateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.joda.time.DateTime;
 
 import java.util.List;
@@ -11,10 +13,20 @@ public class Iteration extends ModelBase {
 	Integer number;
 	Integer projectId;
 	Integer length;
-	Float teamStrength;
+	String teamStrength;
 	List<Integer> storyIds;
 	DateTime start;
 	DateTime finish;
+
+	public Iteration(Integer number, Integer projectId, Integer length, String teamStrength, List<Integer> storyIds, DateTime start, DateTime finish) {
+		this.number = number;
+		this.projectId = projectId;
+		this.length = length;
+		this.teamStrength = teamStrength;
+		this.storyIds = storyIds;
+		this.start = start;
+		this.finish = finish;
+	}
 
 	public Integer getNumber() {
 		return number;
@@ -40,11 +52,11 @@ public class Iteration extends ModelBase {
 		this.length = length;
 	}
 
-	public Float getTeamStrength() {
+	public String getTeamStrength() {
 		return teamStrength;
 	}
 
-	public void setTeamStrength(Float teamStrength) {
+	public void setTeamStrength(String teamStrength) {
 		this.teamStrength = teamStrength;
 	}
 
@@ -56,6 +68,7 @@ public class Iteration extends ModelBase {
 		this.storyIds = storyIds;
 	}
 
+	@JsonSerialize (using = CustomDateSerializer.class)
 	public DateTime getStart() {
 		return start;
 	}
@@ -64,6 +77,7 @@ public class Iteration extends ModelBase {
 		this.start = start;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
 	public DateTime getFinish() {
 		return finish;
 	}
