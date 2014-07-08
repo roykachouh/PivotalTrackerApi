@@ -1,5 +1,7 @@
 package com.asc.tracker.model;
 
+import com.asc.tracker.serializer.CustomDateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.joda.time.DateTime;
 
 /**
@@ -13,6 +15,16 @@ public class ProjectMembership extends ModelBase {
 	DateTime lastViewedAt;
 	Boolean wantsCommentNotificationEmails;
 	Boolean willReceiveMentionNotificationsOrEmails;
+
+	public ProjectMembership(Integer personId, Integer projectId, Role role, String projectColor, DateTime lastViewedAt, Boolean wantsCommentNotificationEmails, Boolean willReceiveMentionNotificationsOrEmails) {
+		this.personId = personId;
+		this.projectId = projectId;
+		this.role = role;
+		this.projectColor = projectColor;
+		this.lastViewedAt = lastViewedAt;
+		this.wantsCommentNotificationEmails = wantsCommentNotificationEmails;
+		this.willReceiveMentionNotificationsOrEmails = willReceiveMentionNotificationsOrEmails;
+	}
 
 	public Integer getPersonId() {
 		return personId;
@@ -46,6 +58,7 @@ public class ProjectMembership extends ModelBase {
 		this.projectColor = projectColor;
 	}
 
+	@JsonSerialize (using = CustomDateSerializer.class)
 	public DateTime getLastViewedAt() {
 		return lastViewedAt;
 	}
