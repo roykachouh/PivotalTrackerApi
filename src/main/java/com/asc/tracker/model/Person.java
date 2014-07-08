@@ -9,6 +9,13 @@ public class Person extends ModelBase {
 	String initials;
 	String username;
 
+	public Person(String name, String email, String initials, String username) {
+		this.name = name;
+		this.email = email;
+		this.initials = initials;
+		this.username = username;
+	}
+
 	public String getName() {
 		return name;
 	}
