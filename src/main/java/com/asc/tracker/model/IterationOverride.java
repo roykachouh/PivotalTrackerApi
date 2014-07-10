@@ -7,7 +7,14 @@ public class IterationOverride extends ModelBase {
 	Integer number;
 	Integer projectId;
 	Integer length;
-	Float teamStrength;
+	String teamStrength;
+
+	public IterationOverride(Integer number, Integer projectId, Integer length, String teamStrength) {
+		this.number = number;
+		this.projectId = projectId;
+		this.length = length;
+		this.teamStrength = teamStrength;
+	}
 
 	public Integer getNumber() {
 		return number;
@@ -33,11 +40,11 @@ public class IterationOverride extends ModelBase {
 		this.length = length;
 	}
 
-	public Float getTeamStrength() {
+	public String getTeamStrength() {
 		return teamStrength;
 	}
 
-	public void setTeamStrength(Float teamStrength) {
+	public void setTeamStrength(String teamStrength) {
 		this.teamStrength = teamStrength;
 	}
 }
