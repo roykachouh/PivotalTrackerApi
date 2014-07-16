@@ -35,6 +35,38 @@ public class Integration extends ModelBase {
 	String name;
 	Boolean active;
 
+
+	public Integration(IntegrationType type, String apiUsername, String apiPassword, String zendeskUserEmail, String zendeskUserPassword, String viewId, String company, String product, String component, String statusesToExclude, String filterId, String account, String externalApiToken, Integer binId, Integer externalProjectId, String importApiUrl, String basicAuthUsername, String basicAuthPassword, Boolean commentsPrivate, Boolean updateComments, Boolean updateState, Integer projectId, Boolean canImport, String baseUrl, Boolean isOther, String storyName, String name, Boolean active) {
+		this.type = type;
+		this.apiUsername = apiUsername;
+		this.apiPassword = apiPassword;
+		this.zendeskUserEmail = zendeskUserEmail;
+		this.zendeskUserPassword = zendeskUserPassword;
+		this.viewId = viewId;
+		this.company = company;
+		this.product = product;
+		this.component = component;
+		this.statusesToExclude = statusesToExclude;
+		this.filterId = filterId;
+		this.account = account;
+		this.externalApiToken = externalApiToken;
+		this.binId = binId;
+		this.externalProjectId = externalProjectId;
+		this.importApiUrl = importApiUrl;
+		this.basicAuthUsername = basicAuthUsername;
+		this.basicAuthPassword = basicAuthPassword;
+		this.commentsPrivate = commentsPrivate;
+		this.updateComments = updateComments;
+		this.updateState = updateState;
+		this.projectId = projectId;
+		this.canImport = canImport;
+		this.baseUrl = baseUrl;
+		this.isOther = isOther;
+		this.storyName = storyName;
+		this.name = name;
+		this.active = active;
+	}
+
 	public IntegrationType getType() {
 		return type;
 	}
