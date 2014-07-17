@@ -25,7 +25,6 @@ public class ProjectTest {
 	public static final boolean AUTOMATIC_PLANNING = false;
 	public static final boolean ENABLE_TASKS = true;
 	public static final DateTime NOW = DateTime.now();
-	public static final TimeZone EST = TimeZone.getTimeZone("EST");
 	public static final int VELOCITY_AVERAGED_OVER = 1;
 	public static final int NUMBER_OF_DONE_ITERATIONS_TO_SHOW = 1;
 	public static final boolean HAS_GOOGLE_DOMAIN = false;
@@ -61,7 +60,6 @@ public class ProjectTest {
 				.withAutomaticPlanning(AUTOMATIC_PLANNING)
 				.withEnableTasks(ENABLE_TASKS)
 				.withStartDate(NOW)
-				.withTimeZone(EST)
 				.withVelocityAveragedOver(VELOCITY_AVERAGED_OVER)
 				.withShownIterationsStartTime(NOW)
 				.withStartTime(NOW)
@@ -106,7 +104,6 @@ public class ProjectTest {
 		assertThat(result.get("automatic_planning")).isEqualTo(AUTOMATIC_PLANNING);
 		assertThat(result.get("enable_tasks")).isEqualTo(ENABLE_TASKS);
 		assertThat(result.get("start_date")).isEqualTo(NOW.toString(CustomDateSerializer.formatter));
-		assertThat(result.get("time_zone")).isEqualTo(EST.getID());
 		assertThat(result.get("velocity_averaged_over")).isEqualTo(VELOCITY_AVERAGED_OVER);
 		assertThat(result.get("shown_iterations_start_time")).isEqualTo(NOW.toString(CustomDateSerializer.formatter));
 		assertThat(result.get("start_time")).isEqualTo(NOW.toString(CustomDateSerializer.formatter));

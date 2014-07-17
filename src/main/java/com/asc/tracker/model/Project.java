@@ -9,7 +9,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.joda.time.DateTime;
 
 import java.util.List;
-import java.util.TimeZone;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Project extends ModelBase {
@@ -32,6 +31,7 @@ public class Project extends ModelBase {
 	String description;
 	String profileContent;
 	Boolean enableIncomingEmails;
+	Boolean enableFollowing;
 	Integer initialVelocity;
 
 	@JsonProperty("public")
@@ -46,6 +46,8 @@ public class Project extends ModelBase {
 	List<Integer> labelIds;
 	List<Integer> integrationIds;
 	List<Integer> iterationOverrideNumbers;
+
+	public Project(){}
 
 
 	public Project(String name, Integer version, Integer iterationLength, WeekStartDay weekStartDay, String pointScale, Boolean pointScaleIsCustom, Boolean bugsAndChoresAreEstimatable, Boolean automaticPlanning, Boolean enableTasks, DateTime startDate, TimeZone timeZone, Integer velocityAveragedOver, DateTime shownIterationsStartTime, DateTime startTime, Integer numberOfDoneIterationsToShow, Boolean hasGoogleDomain, String description, String profileContent, Boolean enableIncomingEmails, Integer initialVelocity, Boolean projectPublic, Boolean atomEnabled, Integer currentIterationNumber, Integer currentVelocity, Integer accountId, List<Integer> storyIds, List<Integer> epicIds, List<Integer> membershipIds, List<Integer> labelIds, List<Integer> integrationIds, List<Integer> iterationOverrideNumbers) {
@@ -331,6 +333,14 @@ public class Project extends ModelBase {
 
 	public void setIterationOverrideNumbers(List<Integer> iterationOverrideNumbers) {
 		this.iterationOverrideNumbers = iterationOverrideNumbers;
+	}
+
+	public Boolean getEnableFollowing() {
+		return enableFollowing;
+	}
+
+	public void setEnableFollowing(Boolean enableFollowing) {
+		this.enableFollowing = enableFollowing;
 	}
 
 	@Override

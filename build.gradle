@@ -15,15 +15,40 @@ sourceCompatibility = 1.7
 version = '1.0'
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'commons-lang:commons-lang:2.6'
+    compile "commons-lang:commons-lang:$commonsLangVersion"
     compile 'javax.validation:validation-api:1.1.0.CR2'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.1.4'
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     compile 'joda-time:joda-time:2.2'
     compile 'org.easytesting:fest-assert:1.4'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.4.0'
+
+//    compile ("org.springframework:spring-context:$springVersion") {
+//        exclude(group: 'commons-logging', module: 'commons-logging')
+//    }
+
+    compile ("org.springframework:spring-web:$springVersion") {
+        exclude(group: 'commons-logging', module: 'commons-logging')
+    }
+
+    testCompile ("org.springframework:spring-test:$springVersion") {
+        exclude(group: 'commons-logging', module: 'commons-logging')
+    }
+
+    compile "ch.qos.logback:logback-classic:$logbackVersion"
+    runtime (
+            "org.slf4j:slf4j-api:$slf4jVersion",
+            "org.slf4j:jcl-over-slf4j:$slf4jVersion"
+    )
 }
+
+configurations {
+    all*.exclude group: "commons-logging", module: "commons-logging"
+}
+
 

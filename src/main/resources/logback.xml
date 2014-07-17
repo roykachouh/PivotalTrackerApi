@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" debug="false">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>%d{ISO8601} [%t] %-5p %c{2} %ex{full} - %m%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ch.qos.logback" level="WARN"/>
+
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.springframework" level="TRACE"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

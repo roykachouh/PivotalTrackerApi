@@ -1,11 +1,11 @@
 package com.asc.tracker.builders;
 
 import com.asc.tracker.model.Project;
+import com.asc.tracker.model.TimeZone;
 import com.asc.tracker.model.WeekStartDay;
 import org.joda.time.DateTime;
 
 import java.util.List;
-import java.util.TimeZone;
 
 public class ProjectBuilder {
 	private String name;
