@@ -21,8 +21,25 @@ public class ProjectTemplateTest extends AbstractApiTemplateTest {
 		Project project = pivotalProjectTemplate.getProject(TEST_PROJECT_ID);
 
 		assertThat(project.getKind()).isEqualTo("project");
-		assertThat(project.getName()).isEqualTo(TEST_PROJECT);
-		assertThat(project.getVersion()).isEqualTo(1);
 		assertThat(project.getIterationLength()).isEqualTo(1);
 	}
+
+	@Test
+	public void testUpdateProject() throws Exception {
+		ProjectTemplate pivotalProjectTemplate = new ProjectTemplate();
+
+		Project project = pivotalProjectTemplate.getProject(TEST_PROJECT_ID);
+
+		assertThat(project.getKind()).isEqualTo("project");
+
+		project.setName("Updated Name");
+		Project updatedProject = pivotalProjectTemplate.updateProject(project);
+
+		assertThat(updatedProject).isNotNull();
+
+		updatedProject = pivotalProjectTemplate.getProject(TEST_PROJECT_ID);
+
+		assertThat(updatedProject.getName()).isEqualTo("Updated Name");
+	}
+
 }

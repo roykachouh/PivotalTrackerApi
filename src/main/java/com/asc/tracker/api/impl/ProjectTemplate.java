@@ -15,8 +15,15 @@ public class ProjectTemplate extends AbstractApiTemplate implements ProjectOpera
 	public Project getProject(String projectId) {
 
 		ResponseEntity<Project> projectResponse =
-				getRestTemplate().getForEntity(PIVOTAL_BASE_ENDPOINT + ENDPOINT_TEMPLATE,Project.class,projectId);
+				getRestTemplate().getForEntity(PIVOTAL_BASE_ENDPOINT + ENDPOINT_TEMPLATE, Project.class, projectId);
 
 		return projectResponse.getBody();
+	}
+
+	@Override
+	public Project updateProject(Project project) {
+		getRestTemplate().put(PIVOTAL_BASE_ENDPOINT + ENDPOINT_TEMPLATE, project, project.getId());
+
+		return project;
 	}
 }

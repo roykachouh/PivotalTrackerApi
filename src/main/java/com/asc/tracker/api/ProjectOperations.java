@@ -7,4 +7,6 @@ import com.asc.tracker.model.Project;
  */
 public interface ProjectOperations {
 	Project getProject(String projectId);
+
+	Project updateProject(Project project);
 }
