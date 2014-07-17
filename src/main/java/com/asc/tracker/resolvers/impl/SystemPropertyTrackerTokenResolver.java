@@ -6,7 +6,7 @@ import com.asc.tracker.resolvers.TrackerTokenResolver;
 /**
  * Created by kachouh on 7/17/14.
  */
-public class CommandLineTrackerTokenResolver implements TrackerTokenResolver {
+public class SystemPropertyTrackerTokenResolver implements TrackerTokenResolver {
 	@Override
 	public String resolveTokenOrFail() throws TrackerTokenResolutionException {
 		String trackerToken = System.getProperty("tracker.token");

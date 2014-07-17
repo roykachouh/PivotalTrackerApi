@@ -4,12 +4,12 @@ import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class CommandLineTrackerTokenResolverTest {
+public class SystemPropertyTrackerTokenResolverTest {
 
 	@Test
 	public void testCommandLineTrackerResolution() {
 		System.setProperty("tracker.token","whatever");
 
-		assertThat(new CommandLineTrackerTokenResolver().resolveTokenOrFail()).isNotNull();
+		assertThat(new SystemPropertyTrackerTokenResolver().resolveTokenOrFail()).isNotNull();
 	}
 }
