@@ -7,5 +7,5 @@ import com.asc.tracker.exceptions.TrackerTokenResolutionException;
  */
 public interface TrackerTokenResolver {
 
-	String resolveTokenOrFail() throws TrackerTokenResolutionException;
+  String resolveTokenOrFail() throws TrackerTokenResolutionException;
 }

@@ -5,289 +5,341 @@ package com.asc.tracker.model;
  */
 public class Integration extends ModelBase {
 
-	IntegrationType type;
+  IntegrationType type;
 
-	String apiUsername;
-	String apiPassword;
-	String zendeskUserEmail;
-	String zendeskUserPassword;
-	String viewId;
-	String company;
-	String product;
-	String component;
-	String statusesToExclude;
-	String filterId;
-	String account;
-	String externalApiToken;
-	Integer binId;
-	Integer externalProjectId;
-	String importApiUrl;
-	String basicAuthUsername;
-	String basicAuthPassword;
-	Boolean commentsPrivate;
-	Boolean updateComments;
-	Boolean updateState;
-	Integer projectId;
-	Boolean canImport;
-	String baseUrl;
-	Boolean isOther;
-	String storyName;
-	String name;
-	Boolean active;
+  String apiUsername;
 
+  String apiPassword;
 
-	public Integration(IntegrationType type, String apiUsername, String apiPassword, String zendeskUserEmail, String zendeskUserPassword, String viewId, String company, String product, String component, String statusesToExclude, String filterId, String account, String externalApiToken, Integer binId, Integer externalProjectId, String importApiUrl, String basicAuthUsername, String basicAuthPassword, Boolean commentsPrivate, Boolean updateComments, Boolean updateState, Integer projectId, Boolean canImport, String baseUrl, Boolean isOther, String storyName, String name, Boolean active) {
-		this.type = type;
-		this.apiUsername = apiUsername;
-		this.apiPassword = apiPassword;
-		this.zendeskUserEmail = zendeskUserEmail;
-		this.zendeskUserPassword = zendeskUserPassword;
-		this.viewId = viewId;
-		this.company = company;
-		this.product = product;
-		this.component = component;
-		this.statusesToExclude = statusesToExclude;
-		this.filterId = filterId;
-		this.account = account;
-		this.externalApiToken = externalApiToken;
-		this.binId = binId;
-		this.externalProjectId = externalProjectId;
-		this.importApiUrl = importApiUrl;
-		this.basicAuthUsername = basicAuthUsername;
-		this.basicAuthPassword = basicAuthPassword;
-		this.commentsPrivate = commentsPrivate;
-		this.updateComments = updateComments;
-		this.updateState = updateState;
-		this.projectId = projectId;
-		this.canImport = canImport;
-		this.baseUrl = baseUrl;
-		this.isOther = isOther;
-		this.storyName = storyName;
-		this.name = name;
-		this.active = active;
-	}
+  String zendeskUserEmail;
 
-	public IntegrationType getType() {
-		return type;
-	}
+  String zendeskUserPassword;
 
-	public void setType(IntegrationType type) {
-		this.type = type;
-	}
+  String viewId;
 
-	public String getApiUsername() {
-		return apiUsername;
-	}
+  String company;
 
-	public void setApiUsername(String apiUsername) {
-		this.apiUsername = apiUsername;
-	}
+  String product;
 
-	public String getApiPassword() {
-		return apiPassword;
-	}
+  String component;
 
-	public void setApiPassword(String apiPassword) {
-		this.apiPassword = apiPassword;
-	}
+  String statusesToExclude;
 
-	public String getZendeskUserEmail() {
-		return zendeskUserEmail;
-	}
+  String filterId;
 
-	public void setZendeskUserEmail(String zendeskUserEmail) {
-		this.zendeskUserEmail = zendeskUserEmail;
-	}
+  String account;
 
-	public String getZendeskUserPassword() {
-		return zendeskUserPassword;
-	}
+  String externalApiToken;
 
-	public void setZendeskUserPassword(String zendeskUserPassword) {
-		this.zendeskUserPassword = zendeskUserPassword;
-	}
+  Integer binId;
 
-	public String getViewId() {
-		return viewId;
-	}
+  Integer externalProjectId;
 
-	public void setViewId(String viewId) {
-		this.viewId = viewId;
-	}
+  String importApiUrl;
 
-	public String getCompany() {
-		return company;
-	}
+  String basicAuthUsername;
 
-	public void setCompany(String company) {
-		this.company = company;
-	}
+  String basicAuthPassword;
 
-	public String getProduct() {
-		return product;
-	}
+  Boolean commentsPrivate;
 
-	public void setProduct(String product) {
-		this.product = product;
-	}
+  Boolean updateComments;
 
-	public String getComponent() {
-		return component;
-	}
+  Boolean updateState;
 
-	public void setComponent(String component) {
-		this.component = component;
-	}
+  Integer projectId;
 
-	public String getStatusesToExclude() {
-		return statusesToExclude;
-	}
+  Boolean canImport;
 
-	public void setStatusesToExclude(String statusesToExclude) {
-		this.statusesToExclude = statusesToExclude;
-	}
+  String baseUrl;
 
-	public String getFilterId() {
-		return filterId;
-	}
+  Boolean isOther;
 
-	public void setFilterId(String filterId) {
-		this.filterId = filterId;
-	}
+  String storyName;
 
-	public String getAccount() {
-		return account;
-	}
+  String name;
 
-	public void setAccount(String account) {
-		this.account = account;
-	}
+  Boolean active;
 
-	public String getExternalApiToken() {
-		return externalApiToken;
-	}
+  public Integration(IntegrationType type,
+      String apiUsername,
+      String apiPassword,
+      String zendeskUserEmail,
+      String zendeskUserPassword,
+      String viewId,
+      String company,
+      String product,
+      String component,
+      String statusesToExclude,
+      String filterId,
+      String account,
+      String externalApiToken,
+      Integer binId,
+      Integer externalProjectId,
+      String importApiUrl,
+      String basicAuthUsername,
+      String basicAuthPassword,
+      Boolean commentsPrivate,
+      Boolean updateComments,
+      Boolean updateState,
+      Integer projectId,
+      Boolean canImport,
+      String baseUrl,
+      Boolean isOther,
+      String storyName,
+      String name,
+      Boolean active) {
+    this.type = type;
+    this.apiUsername = apiUsername;
+    this.apiPassword = apiPassword;
+    this.zendeskUserEmail = zendeskUserEmail;
+    this.zendeskUserPassword = zendeskUserPassword;
+    this.viewId = viewId;
+    this.company = company;
+    this.product = product;
+    this.component = component;
+    this.statusesToExclude = statusesToExclude;
+    this.filterId = filterId;
+    this.account = account;
+    this.externalApiToken = externalApiToken;
+    this.binId = binId;
+    this.externalProjectId = externalProjectId;
+    this.importApiUrl = importApiUrl;
+    this.basicAuthUsername = basicAuthUsername;
+    this.basicAuthPassword = basicAuthPassword;
+    this.commentsPrivate = commentsPrivate;
+    this.updateComments = updateComments;
+    this.updateState = updateState;
+    this.projectId = projectId;
+    this.canImport = canImport;
+    this.baseUrl = baseUrl;
+    this.isOther = isOther;
+    this.storyName = storyName;
+    this.name = name;
+    this.active = active;
+  }
 
-	public void setExternalApiToken(String externalApiToken) {
-		this.externalApiToken = externalApiToken;
-	}
+  public IntegrationType getType() {
+    return type;
+  }
 
-	public Integer getBinId() {
-		return binId;
-	}
+  public void setType(IntegrationType type) {
+    this.type = type;
+  }
 
-	public void setBinId(Integer binId) {
-		this.binId = binId;
-	}
+  public String getApiUsername() {
+    return apiUsername;
+  }
 
-	public Integer getExternalProjectId() {
-		return externalProjectId;
-	}
+  public void setApiUsername(String apiUsername) {
+    this.apiUsername = apiUsername;
+  }
 
-	public void setExternalProjectId(Integer externalProjectId) {
-		this.externalProjectId = externalProjectId;
-	}
+  public String getApiPassword() {
+    return apiPassword;
+  }
 
-	public String getImportApiUrl() {
-		return importApiUrl;
-	}
+  public void setApiPassword(String apiPassword) {
+    this.apiPassword = apiPassword;
+  }
 
-	public void setImportApiUrl(String importApiUrl) {
-		this.importApiUrl = importApiUrl;
-	}
+  public String getZendeskUserEmail() {
+    return zendeskUserEmail;
+  }
 
-	public String getBasicAuthUsername() {
-		return basicAuthUsername;
-	}
+  public void setZendeskUserEmail(String zendeskUserEmail) {
+    this.zendeskUserEmail = zendeskUserEmail;
+  }
 
-	public void setBasicAuthUsername(String basicAuthUsername) {
-		this.basicAuthUsername = basicAuthUsername;
-	}
+  public String getZendeskUserPassword() {
+    return zendeskUserPassword;
+  }
 
-	public String getBasicAuthPassword() {
-		return basicAuthPassword;
-	}
+  public void setZendeskUserPassword(String zendeskUserPassword) {
+    this.zendeskUserPassword = zendeskUserPassword;
+  }
 
-	public void setBasicAuthPassword(String basicAuthPassword) {
-		this.basicAuthPassword = basicAuthPassword;
-	}
+  public String getViewId() {
+    return viewId;
+  }
 
-	public Boolean getCommentsPrivate() {
-		return commentsPrivate;
-	}
+  public void setViewId(String viewId) {
+    this.viewId = viewId;
+  }
 
-	public void setCommentsPrivate(Boolean commentsPrivate) {
-		this.commentsPrivate = commentsPrivate;
-	}
+  public String getCompany() {
+    return company;
+  }
 
-	public Boolean getUpdateComments() {
-		return updateComments;
-	}
+  public void setCompany(String company) {
+    this.company = company;
+  }
 
-	public void setUpdateComments(Boolean updateComments) {
-		this.updateComments = updateComments;
-	}
+  public String getProduct() {
+    return product;
+  }
 
-	public Boolean getUpdateState() {
-		return updateState;
-	}
+  public void setProduct(String product) {
+    this.product = product;
+  }
 
-	public void setUpdateState(Boolean updateState) {
-		this.updateState = updateState;
-	}
+  public String getComponent() {
+    return component;
+  }
 
-	public Integer getProjectId() {
-		return projectId;
-	}
+  public void setComponent(String component) {
+    this.component = component;
+  }
 
-	public void setProjectId(Integer projectId) {
-		this.projectId = projectId;
-	}
+  public String getStatusesToExclude() {
+    return statusesToExclude;
+  }
 
-	public Boolean getCanImport() {
-		return canImport;
-	}
+  public void setStatusesToExclude(String statusesToExclude) {
+    this.statusesToExclude = statusesToExclude;
+  }
 
-	public void setCanImport(Boolean canImport) {
-		this.canImport = canImport;
-	}
+  public String getFilterId() {
+    return filterId;
+  }
 
-	public String getBaseUrl() {
-		return baseUrl;
-	}
+  public void setFilterId(String filterId) {
+    this.filterId = filterId;
+  }
 
-	public void setBaseUrl(String baseUrl) {
-		this.baseUrl = baseUrl;
-	}
+  public String getAccount() {
+    return account;
+  }
 
-	public Boolean getIsOther() {
-		return isOther;
-	}
+  public void setAccount(String account) {
+    this.account = account;
+  }
 
-	public void setIsOther(Boolean isOther) {
-		this.isOther = isOther;
-	}
+  public String getExternalApiToken() {
+    return externalApiToken;
+  }
 
-	public String getStoryName() {
-		return storyName;
-	}
+  public void setExternalApiToken(String externalApiToken) {
+    this.externalApiToken = externalApiToken;
+  }
 
-	public void setStoryName(String storyName) {
-		this.storyName = storyName;
-	}
+  public Integer getBinId() {
+    return binId;
+  }
 
-	public String getName() {
-		return name;
-	}
+  public void setBinId(Integer binId) {
+    this.binId = binId;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public Integer getExternalProjectId() {
+    return externalProjectId;
+  }
 
-	public Boolean getActive() {
-		return active;
-	}
+  public void setExternalProjectId(Integer externalProjectId) {
+    this.externalProjectId = externalProjectId;
+  }
 
-	public void setActive(Boolean active) {
-		this.active = active;
-	}
+  public String getImportApiUrl() {
+    return importApiUrl;
+  }
+
+  public void setImportApiUrl(String importApiUrl) {
+    this.importApiUrl = importApiUrl;
+  }
+
+  public String getBasicAuthUsername() {
+    return basicAuthUsername;
+  }
+
+  public void setBasicAuthUsername(String basicAuthUsername) {
+    this.basicAuthUsername = basicAuthUsername;
+  }
+
+  public String getBasicAuthPassword() {
+    return basicAuthPassword;
+  }
+
+  public void setBasicAuthPassword(String basicAuthPassword) {
+    this.basicAuthPassword = basicAuthPassword;
+  }
+
+  public Boolean getCommentsPrivate() {
+    return commentsPrivate;
+  }
+
+  public void setCommentsPrivate(Boolean commentsPrivate) {
+    this.commentsPrivate = commentsPrivate;
+  }
+
+  public Boolean getUpdateComments() {
+    return updateComments;
+  }
+
+  public void setUpdateComments(Boolean updateComments) {
+    this.updateComments = updateComments;
+  }
+
+  public Boolean getUpdateState() {
+    return updateState;
+  }
+
+  public void setUpdateState(Boolean updateState) {
+    this.updateState = updateState;
+  }
+
+  public Integer getProjectId() {
+    return projectId;
+  }
+
+  public void setProjectId(Integer projectId) {
+    this.projectId = projectId;
+  }
+
+  public Boolean getCanImport() {
+    return canImport;
+  }
+
+  public void setCanImport(Boolean canImport) {
+    this.canImport = canImport;
+  }
+
+  public String getBaseUrl() {
+    return baseUrl;
+  }
+
+  public void setBaseUrl(String baseUrl) {
+    this.baseUrl = baseUrl;
+  }
+
+  public Boolean getIsOther() {
+    return isOther;
+  }
+
+  public void setIsOther(Boolean isOther) {
+    this.isOther = isOther;
+  }
+
+  public String getStoryName() {
+    return storyName;
+  }
+
+  public void setStoryName(String storyName) {
+    this.storyName = storyName;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Boolean getActive() {
+    return active;
+  }
+
+  public void setActive(Boolean active) {
+    this.active = active;
+  }
 }

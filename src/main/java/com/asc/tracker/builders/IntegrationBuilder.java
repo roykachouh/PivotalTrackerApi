@@ -4,176 +4,231 @@ import com.asc.tracker.model.Integration;
 import com.asc.tracker.model.IntegrationType;
 
 public class IntegrationBuilder {
-	private IntegrationType type;
-	private String apiUsername;
-	private String apiPassword;
-	private String zendeskUserEmail;
-	private String zendeskUserPassword;
-	private String viewId;
-	private String company;
-	private String product;
-	private String component;
-	private String statusesToExclude;
-	private String filterId;
-	private String account;
-	private String externalApiToken;
-	private Integer binId;
-	private Integer externalProjectId;
-	private String importApiUrl;
-	private String basicAuthUsername;
-	private String basicAuthPassword;
-	private Boolean commentsPrivate;
-	private Boolean updateComments;
-	private Boolean updateState;
-	private Integer projectId;
-	private Boolean canImport;
-	private String baseUrl;
-	private Boolean isOther;
-	private String storyName;
-	private String name;
-	private Boolean active;
 
-	public IntegrationBuilder withType(IntegrationType type) {
-		this.type = type;
-		return this;
-	}
+  private IntegrationType type;
 
-	public IntegrationBuilder withApiUsername(String apiUsername) {
-		this.apiUsername = apiUsername;
-		return this;
-	}
+  private String apiUsername;
 
-	public IntegrationBuilder withApiPassword(String apiPassword) {
-		this.apiPassword = apiPassword;
-		return this;
-	}
+  private String apiPassword;
 
-	public IntegrationBuilder withZendeskUserEmail(String zendeskUserEmail) {
-		this.zendeskUserEmail = zendeskUserEmail;
-		return this;
-	}
+  private String zendeskUserEmail;
 
-	public IntegrationBuilder withZendeskUserPassword(String zendeskUserPassword) {
-		this.zendeskUserPassword = zendeskUserPassword;
-		return this;
-	}
+  private String zendeskUserPassword;
 
-	public IntegrationBuilder withViewId(String viewId) {
-		this.viewId = viewId;
-		return this;
-	}
+  private String viewId;
 
-	public IntegrationBuilder withCompany(String company) {
-		this.company = company;
-		return this;
-	}
+  private String company;
 
-	public IntegrationBuilder withProduct(String product) {
-		this.product = product;
-		return this;
-	}
+  private String product;
 
-	public IntegrationBuilder withComponent(String component) {
-		this.component = component;
-		return this;
-	}
+  private String component;
 
-	public IntegrationBuilder withStatusesToExclude(String statusesToExclude) {
-		this.statusesToExclude = statusesToExclude;
-		return this;
-	}
+  private String statusesToExclude;
 
-	public IntegrationBuilder withFilterId(String filterId) {
-		this.filterId = filterId;
-		return this;
-	}
+  private String filterId;
 
-	public IntegrationBuilder withAccount(String account) {
-		this.account = account;
-		return this;
-	}
+  private String account;
 
-	public IntegrationBuilder withExternalApiToken(String externalApiToken) {
-		this.externalApiToken = externalApiToken;
-		return this;
-	}
+  private String externalApiToken;
 
-	public IntegrationBuilder withBinId(Integer binId) {
-		this.binId = binId;
-		return this;
-	}
+  private Integer binId;
 
-	public IntegrationBuilder withExternalProjectId(Integer externalProjectId) {
-		this.externalProjectId = externalProjectId;
-		return this;
-	}
+  private Integer externalProjectId;
 
-	public IntegrationBuilder withImportApiUrl(String importApiUrl) {
-		this.importApiUrl = importApiUrl;
-		return this;
-	}
+  private String importApiUrl;
 
-	public IntegrationBuilder withBasicAuthUsername(String basicAuthUsername) {
-		this.basicAuthUsername = basicAuthUsername;
-		return this;
-	}
+  private String basicAuthUsername;
 
-	public IntegrationBuilder withBasicAuthPassword(String basicAuthPassword) {
-		this.basicAuthPassword = basicAuthPassword;
-		return this;
-	}
+  private String basicAuthPassword;
 
-	public IntegrationBuilder withCommentsPrivate(Boolean commentsPrivate) {
-		this.commentsPrivate = commentsPrivate;
-		return this;
-	}
+  private Boolean commentsPrivate;
 
-	public IntegrationBuilder withUpdateComments(Boolean updateComments) {
-		this.updateComments = updateComments;
-		return this;
-	}
+  private Boolean updateComments;
 
-	public IntegrationBuilder withUpdateState(Boolean updateState) {
-		this.updateState = updateState;
-		return this;
-	}
+  private Boolean updateState;
 
-	public IntegrationBuilder withProjectId(Integer projectId) {
-		this.projectId = projectId;
-		return this;
-	}
+  private Integer projectId;
 
-	public IntegrationBuilder withCanImport(Boolean canImport) {
-		this.canImport = canImport;
-		return this;
-	}
+  private Boolean canImport;
 
-	public IntegrationBuilder withBaseUrl(String baseUrl) {
-		this.baseUrl = baseUrl;
-		return this;
-	}
+  private String baseUrl;
 
-	public IntegrationBuilder withIsOther(Boolean isOther) {
-		this.isOther = isOther;
-		return this;
-	}
+  private Boolean isOther;
 
-	public IntegrationBuilder withStoryName(String storyName) {
-		this.storyName = storyName;
-		return this;
-	}
+  private String storyName;
 
-	public IntegrationBuilder withName(String name) {
-		this.name = name;
-		return this;
-	}
+  private String name;
 
-	public IntegrationBuilder withActive(Boolean active) {
-		this.active = active;
-		return this;
-	}
+  private Boolean active;
 
-	public Integration createIntegration() {
-		return new Integration(type, apiUsername, apiPassword, zendeskUserEmail, zendeskUserPassword, viewId, company, product, component, statusesToExclude, filterId, account, externalApiToken, binId, externalProjectId, importApiUrl, basicAuthUsername, basicAuthPassword, commentsPrivate, updateComments, updateState, projectId, canImport, baseUrl, isOther, storyName, name, active);
-	}
+  public IntegrationBuilder withType(IntegrationType type) {
+    this.type = type;
+    return this;
+  }
+
+  public IntegrationBuilder withApiUsername(String apiUsername) {
+    this.apiUsername = apiUsername;
+    return this;
+  }
+
+  public IntegrationBuilder withApiPassword(String apiPassword) {
+    this.apiPassword = apiPassword;
+    return this;
+  }
+
+  public IntegrationBuilder withZendeskUserEmail(String zendeskUserEmail) {
+    this.zendeskUserEmail = zendeskUserEmail;
+    return this;
+  }
+
+  public IntegrationBuilder withZendeskUserPassword(String zendeskUserPassword) {
+    this.zendeskUserPassword = zendeskUserPassword;
+    return this;
+  }
+
+  public IntegrationBuilder withViewId(String viewId) {
+    this.viewId = viewId;
+    return this;
+  }
+
+  public IntegrationBuilder withCompany(String company) {
+    this.company = company;
+    return this;
+  }
+
+  public IntegrationBuilder withProduct(String product) {
+    this.product = product;
+    return this;
+  }
+
+  public IntegrationBuilder withComponent(String component) {
+    this.component = component;
+    return this;
+  }
+
+  public IntegrationBuilder withStatusesToExclude(String statusesToExclude) {
+    this.statusesToExclude = statusesToExclude;
+    return this;
+  }
+
+  public IntegrationBuilder withFilterId(String filterId) {
+    this.filterId = filterId;
+    return this;
+  }
+
+  public IntegrationBuilder withAccount(String account) {
+    this.account = account;
+    return this;
+  }
+
+  public IntegrationBuilder withExternalApiToken(String externalApiToken) {
+    this.externalApiToken = externalApiToken;
+    return this;
+  }
+
+  public IntegrationBuilder withBinId(Integer binId) {
+    this.binId = binId;
+    return this;
+  }
+
+  public IntegrationBuilder withExternalProjectId(Integer externalProjectId) {
+    this.externalProjectId = externalProjectId;
+    return this;
+  }
+
+  public IntegrationBuilder withImportApiUrl(String importApiUrl) {
+    this.importApiUrl = importApiUrl;
+    return this;
+  }
+
+  public IntegrationBuilder withBasicAuthUsername(String basicAuthUsername) {
+    this.basicAuthUsername = basicAuthUsername;
+    return this;
+  }
+
+  public IntegrationBuilder withBasicAuthPassword(String basicAuthPassword) {
+    this.basicAuthPassword = basicAuthPassword;
+    return this;
+  }
+
+  public IntegrationBuilder withCommentsPrivate(Boolean commentsPrivate) {
+    this.commentsPrivate = commentsPrivate;
+    return this;
+  }
+
+  public IntegrationBuilder withUpdateComments(Boolean updateComments) {
+    this.updateComments = updateComments;
+    return this;
+  }
+
+  public IntegrationBuilder withUpdateState(Boolean updateState) {
+    this.updateState = updateState;
+    return this;
+  }
+
+  public IntegrationBuilder withProjectId(Integer projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+  public IntegrationBuilder withCanImport(Boolean canImport) {
+    this.canImport = canImport;
+    return this;
+  }
+
+  public IntegrationBuilder withBaseUrl(String baseUrl) {
+    this.baseUrl = baseUrl;
+    return this;
+  }
+
+  public IntegrationBuilder withIsOther(Boolean isOther) {
+    this.isOther = isOther;
+    return this;
+  }
+
+  public IntegrationBuilder withStoryName(String storyName) {
+    this.storyName = storyName;
+    return this;
+  }
+
+  public IntegrationBuilder withName(String name) {
+    this.name = name;
+    return this;
+  }
+
+  public IntegrationBuilder withActive(Boolean active) {
+    this.active = active;
+    return this;
+  }
+
+  public Integration createIntegration() {
+    return new Integration(type,
+        apiUsername,
+        apiPassword,
+        zendeskUserEmail,
+        zendeskUserPassword,
+        viewId,
+        company,
+        product,
+        component,
+        statusesToExclude,
+        filterId,
+        account,
+        externalApiToken,
+        binId,
+        externalProjectId,
+        importApiUrl,
+        basicAuthUsername,
+        basicAuthPassword,
+        commentsPrivate,
+        updateComments,
+        updateState,
+        projectId,
+        canImport,
+        baseUrl,
+        isOther,
+        storyName,
+        name,
+        active);
+  }
 }

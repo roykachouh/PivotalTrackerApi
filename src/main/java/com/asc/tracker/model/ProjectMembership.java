@@ -1,85 +1,98 @@
 package com.asc.tracker.model;
 
+import org.joda.time.DateTime;
 import com.asc.tracker.serializer.CustomDateSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import org.joda.time.DateTime;
 
 /**
  * Created by kachouh on 6/20/14.
  */
 public class ProjectMembership extends ModelBase {
-	Integer personId;
-	Integer projectId;
-	Role role;
-	String projectColor;
-	DateTime lastViewedAt;
-	Boolean wantsCommentNotificationEmails;
-	Boolean willReceiveMentionNotificationsOrEmails;
 
-	public ProjectMembership(Integer personId, Integer projectId, Role role, String projectColor, DateTime lastViewedAt, Boolean wantsCommentNotificationEmails, Boolean willReceiveMentionNotificationsOrEmails) {
-		this.personId = personId;
-		this.projectId = projectId;
-		this.role = role;
-		this.projectColor = projectColor;
-		this.lastViewedAt = lastViewedAt;
-		this.wantsCommentNotificationEmails = wantsCommentNotificationEmails;
-		this.willReceiveMentionNotificationsOrEmails = willReceiveMentionNotificationsOrEmails;
-	}
+  Integer personId;
 
-	public Integer getPersonId() {
-		return personId;
-	}
+  Integer projectId;
 
-	public void setPersonId(Integer personId) {
-		this.personId = personId;
-	}
+  Role role;
 
-	public Integer getProjectId() {
-		return projectId;
-	}
+  String projectColor;
 
-	public void setProjectId(Integer projectId) {
-		this.projectId = projectId;
-	}
+  DateTime lastViewedAt;
 
-	public Role getRole() {
-		return role;
-	}
+  Boolean wantsCommentNotificationEmails;
 
-	public void setRole(Role role) {
-		this.role = role;
-	}
+  Boolean willReceiveMentionNotificationsOrEmails;
 
-	public String getProjectColor() {
-		return projectColor;
-	}
+  public ProjectMembership(Integer personId,
+      Integer projectId,
+      Role role,
+      String projectColor,
+      DateTime lastViewedAt,
+      Boolean wantsCommentNotificationEmails,
+      Boolean willReceiveMentionNotificationsOrEmails) {
+    this.personId = personId;
+    this.projectId = projectId;
+    this.role = role;
+    this.projectColor = projectColor;
+    this.lastViewedAt = lastViewedAt;
+    this.wantsCommentNotificationEmails = wantsCommentNotificationEmails;
+    this.willReceiveMentionNotificationsOrEmails = willReceiveMentionNotificationsOrEmails;
+  }
 
-	public void setProjectColor(String projectColor) {
-		this.projectColor = projectColor;
-	}
+  public Integer getPersonId() {
+    return personId;
+  }
 
-	@JsonSerialize (using = CustomDateSerializer.class)
-	public DateTime getLastViewedAt() {
-		return lastViewedAt;
-	}
+  public void setPersonId(Integer personId) {
+    this.personId = personId;
+  }
 
-	public void setLastViewedAt(DateTime lastViewedAt) {
-		this.lastViewedAt = lastViewedAt;
-	}
+  public Integer getProjectId() {
+    return projectId;
+  }
 
-	public Boolean getWantsCommentNotificationEmails() {
-		return wantsCommentNotificationEmails;
-	}
+  public void setProjectId(Integer projectId) {
+    this.projectId = projectId;
+  }
 
-	public void setWantsCommentNotificationEmails(Boolean wantsCommentNotificationEmails) {
-		this.wantsCommentNotificationEmails = wantsCommentNotificationEmails;
-	}
+  public Role getRole() {
+    return role;
+  }
 
-	public Boolean getWillReceiveMentionNotificationsOrEmails() {
-		return willReceiveMentionNotificationsOrEmails;
-	}
+  public void setRole(Role role) {
+    this.role = role;
+  }
 
-	public void setWillReceiveMentionNotificationsOrEmails(Boolean willReceiveMentionNotificationsOrEmails) {
-		this.willReceiveMentionNotificationsOrEmails = willReceiveMentionNotificationsOrEmails;
-	}
+  public String getProjectColor() {
+    return projectColor;
+  }
+
+  public void setProjectColor(String projectColor) {
+    this.projectColor = projectColor;
+  }
+
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getLastViewedAt() {
+    return lastViewedAt;
+  }
+
+  public void setLastViewedAt(DateTime lastViewedAt) {
+    this.lastViewedAt = lastViewedAt;
+  }
+
+  public Boolean getWantsCommentNotificationEmails() {
+    return wantsCommentNotificationEmails;
+  }
+
+  public void setWantsCommentNotificationEmails(Boolean wantsCommentNotificationEmails) {
+    this.wantsCommentNotificationEmails = wantsCommentNotificationEmails;
+  }
+
+  public Boolean getWillReceiveMentionNotificationsOrEmails() {
+    return willReceiveMentionNotificationsOrEmails;
+  }
+
+  public void setWillReceiveMentionNotificationsOrEmails(Boolean willReceiveMentionNotificationsOrEmails) {
+    this.willReceiveMentionNotificationsOrEmails = willReceiveMentionNotificationsOrEmails;
+  }
 }

@@ -3,32 +3,36 @@ package com.asc.tracker.builders;
 import com.asc.tracker.model.IterationOverride;
 
 public class IterationOverrideBuilder {
-	private Integer number;
-	private Integer projectId;
-	private Integer length;
-	private String teamStrength;
 
-	public IterationOverrideBuilder withNumber(Integer number) {
-		this.number = number;
-		return this;
-	}
+  private Integer number;
 
-	public IterationOverrideBuilder withProjectId(Integer projectId) {
-		this.projectId = projectId;
-		return this;
-	}
+  private Integer projectId;
 
-	public IterationOverrideBuilder withLength(Integer length) {
-		this.length = length;
-		return this;
-	}
+  private Integer length;
 
-	public IterationOverrideBuilder withTeamStrength(String teamStrength) {
-		this.teamStrength = teamStrength;
-		return this;
-	}
+  private String teamStrength;
 
-	public IterationOverride createIterationOverride() {
-		return new IterationOverride(number, projectId, length, teamStrength);
-	}
+  public IterationOverrideBuilder withNumber(Integer number) {
+    this.number = number;
+    return this;
+  }
+
+  public IterationOverrideBuilder withProjectId(Integer projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+  public IterationOverrideBuilder withLength(Integer length) {
+    this.length = length;
+    return this;
+  }
+
+  public IterationOverrideBuilder withTeamStrength(String teamStrength) {
+    this.teamStrength = teamStrength;
+    return this;
+  }
+
+  public IterationOverride createIterationOverride() {
+    return new IterationOverride(number, projectId, length, teamStrength);
+  }
 }

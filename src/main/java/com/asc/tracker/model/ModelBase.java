@@ -1,64 +1,69 @@
 package com.asc.tracker.model;
 
+import java.io.Serializable;
+
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.joda.time.DateTime;
 import com.asc.tracker.serializer.CustomDateSerializer;
 import com.asc.tracker.serializer.JSONSerializer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.joda.time.DateTime;
-
-import java.io.Serializable;
 
 /**
  * Created by kachouh on 6/19/14.
  */
 public abstract class ModelBase implements Serializable {
 
-	Integer id;
-	DateTime createdAt;
-	DateTime updatedAt;
-	String kind;
+  Integer id;
 
-	public Integer getId() {
-		return id;
-	}
+  DateTime createdAt;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+  DateTime updatedAt;
 
-	@JsonSerialize(using = CustomDateSerializer.class)
-	public DateTime getCreatedAt() {
-		return createdAt;
-	}
+  String kind;
 
-	public void setCreatedAt(DateTime createdAt) {
-		this.createdAt = createdAt;
-	}
+  public Integer getId() {
+    return id;
+  }
 
-	@JsonSerialize(using = CustomDateSerializer.class)
-	public DateTime getUpdatedAt() {
-		return updatedAt;
-	}
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-	public void setUpdatedAt(DateTime updatedAt) {
-		this.updatedAt = updatedAt;
-	}
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getCreatedAt() {
+    return createdAt;
+  }
 
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
+  public void setCreatedAt(DateTime createdAt) {
+    this.createdAt = createdAt;
+  }
 
-	public String getKind() {
-		return kind;
-	}
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getUpdatedAt() {
+    return updatedAt;
+  }
 
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
+  public void setUpdatedAt(DateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
 
-	String toJson() throws JsonProcessingException {
-		return new JSONSerializer<>().write(this);
-	};
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(this);
+  }
+
+  public String getKind() {
+    return kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  String toJson() throws JsonProcessingException {
+    return new JSONSerializer<>().write(this);
+  }
+
+  ;
 }

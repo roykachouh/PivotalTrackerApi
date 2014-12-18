@@ -5,23 +5,26 @@ package com.asc.tracker.exceptions;
  */
 public class TrackerTokenResolutionException extends RuntimeException {
 
-	public TrackerTokenResolutionException() {
-		super();
-	}
+  public TrackerTokenResolutionException() {
+    super();
+  }
 
-	public TrackerTokenResolutionException(String message) {
-		super(message);
-	}
+  public TrackerTokenResolutionException(String message) {
+    super(message);
+  }
 
-	public TrackerTokenResolutionException(String message, Throwable cause) {
-		super(message, cause);
-	}
+  public TrackerTokenResolutionException(String message, Throwable cause) {
+    super(message, cause);
+  }
 
-	public TrackerTokenResolutionException(Throwable cause) {
-		super(cause);
-	}
+  public TrackerTokenResolutionException(Throwable cause) {
+    super(cause);
+  }
 
-	protected TrackerTokenResolutionException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
-	}
+  protected TrackerTokenResolutionException(String message,
+      Throwable cause,
+      boolean enableSuppression,
+      boolean writableStackTrace) {
+    super(message, cause, enableSuppression, writableStackTrace);
+  }
 }

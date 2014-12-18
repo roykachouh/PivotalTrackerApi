@@ -4,47 +4,51 @@ package com.asc.tracker.model;
  * Created by kachouh on 6/20/14.
  */
 public class Person extends ModelBase {
-	String name;
-	String email;
-	String initials;
-	String username;
 
-	public Person(String name, String email, String initials, String username) {
-		this.name = name;
-		this.email = email;
-		this.initials = initials;
-		this.username = username;
-	}
+  String name;
 
-	public String getName() {
-		return name;
-	}
+  String email;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  String initials;
 
-	public String getEmail() {
-		return email;
-	}
+  String username;
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+  public Person(String name, String email, String initials, String username) {
+    this.name = name;
+    this.email = email;
+    this.initials = initials;
+    this.username = username;
+  }
 
-	public String getInitials() {
-		return initials;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public void setInitials(String initials) {
-		this.initials = initials;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public String getUsername() {
-		return username;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getInitials() {
+    return initials;
+  }
+
+  public void setInitials(String initials) {
+    this.initials = initials;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
 }

@@ -1,94 +1,107 @@
 package com.asc.tracker.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-
 import java.util.List;
 
-@JsonInclude ( JsonInclude.Include.NON_NULL )
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Comment extends ModelBase {
 
-	Integer storyId;
-	Integer epicId;
-	String text;
-	Integer personId;
-	List<Integer> fileAttachmentIds;
-	List<Integer> googleAttachmentIds;
-	String commentIdentifier;
-	String commitType;
+  Integer storyId;
 
-	public Comment(Integer storyId, Integer epicId, String text, Integer personId, List<Integer> fileAttachmentIds, List<Integer> googleAttachmentIds, String commentIdentifier, String commitType) {
-		this.storyId = storyId;
-		this.epicId = epicId;
-		this.text = text;
-		this.personId = personId;
-		this.fileAttachmentIds = fileAttachmentIds;
-		this.googleAttachmentIds = googleAttachmentIds;
-		this.commentIdentifier = commentIdentifier;
-		this.commitType = commitType;
-	}
+  Integer epicId;
 
-	public Integer getStoryId() {
-		return storyId;
-	}
+  String text;
 
-	public void setStoryId(Integer storyId) {
-		this.storyId = storyId;
-	}
+  Integer personId;
 
-	public Integer getEpicId() {
-		return epicId;
-	}
+  List<Integer> fileAttachmentIds;
 
-	public void setEpicId(Integer epicId) {
-		this.epicId = epicId;
-	}
+  List<Integer> googleAttachmentIds;
 
-	public String getText() {
-		return text;
-	}
+  String commentIdentifier;
 
-	public void setText(String text) {
-		this.text = text;
-	}
+  String commitType;
 
-	public Integer getPersonId() {
-		return personId;
-	}
+  public Comment(Integer storyId,
+      Integer epicId,
+      String text,
+      Integer personId,
+      List<Integer> fileAttachmentIds,
+      List<Integer> googleAttachmentIds,
+      String commentIdentifier,
+      String commitType) {
+    this.storyId = storyId;
+    this.epicId = epicId;
+    this.text = text;
+    this.personId = personId;
+    this.fileAttachmentIds = fileAttachmentIds;
+    this.googleAttachmentIds = googleAttachmentIds;
+    this.commentIdentifier = commentIdentifier;
+    this.commitType = commitType;
+  }
 
-	public void setPersonId(Integer personId) {
-		this.personId = personId;
-	}
+  public Integer getStoryId() {
+    return storyId;
+  }
 
-	public List<Integer> getFileAttachmentIds() {
-		return fileAttachmentIds;
-	}
+  public void setStoryId(Integer storyId) {
+    this.storyId = storyId;
+  }
 
-	public void setFileAttachmentIds(List<Integer> fileAttachmentIds) {
-		this.fileAttachmentIds = fileAttachmentIds;
-	}
+  public Integer getEpicId() {
+    return epicId;
+  }
 
-	public List<Integer> getGoogleAttachmentIds() {
-		return googleAttachmentIds;
-	}
+  public void setEpicId(Integer epicId) {
+    this.epicId = epicId;
+  }
 
-	public void setGoogleAttachmentIds(List<Integer> googleAttachmentIds) {
-		this.googleAttachmentIds = googleAttachmentIds;
-	}
+  public String getText() {
+    return text;
+  }
 
-	public String getCommentIdentifier() {
-		return commentIdentifier;
-	}
+  public void setText(String text) {
+    this.text = text;
+  }
 
-	public void setCommentIdentifier(String commentIdentifier) {
-		this.commentIdentifier = commentIdentifier;
-	}
+  public Integer getPersonId() {
+    return personId;
+  }
 
-	public String getCommitType() {
-		return commitType;
-	}
+  public void setPersonId(Integer personId) {
+    this.personId = personId;
+  }
 
-	public void setCommitType(String commitType) {
-		this.commitType = commitType;
-	}
+  public List<Integer> getFileAttachmentIds() {
+    return fileAttachmentIds;
+  }
 
+  public void setFileAttachmentIds(List<Integer> fileAttachmentIds) {
+    this.fileAttachmentIds = fileAttachmentIds;
+  }
+
+  public List<Integer> getGoogleAttachmentIds() {
+    return googleAttachmentIds;
+  }
+
+  public void setGoogleAttachmentIds(List<Integer> googleAttachmentIds) {
+    this.googleAttachmentIds = googleAttachmentIds;
+  }
+
+  public String getCommentIdentifier() {
+    return commentIdentifier;
+  }
+
+  public void setCommentIdentifier(String commentIdentifier) {
+    this.commentIdentifier = commentIdentifier;
+  }
+
+  public String getCommitType() {
+    return commitType;
+  }
+
+  public void setCommitType(String commitType) {
+    this.commitType = commitType;
+  }
 }

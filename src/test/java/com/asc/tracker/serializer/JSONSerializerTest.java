@@ -4,8 +4,8 @@ import org.junit.Test;
 
 public class JSONSerializerTest {
 
-	@Test
-	public void objectMapperSetupProperly() {
+  @Test
+  public void objectMapperSetupProperly() {
 
-	}
+  }
 }

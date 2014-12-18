@@ -4,117 +4,138 @@ package com.asc.tracker.model;
  * Created by kachouh on 6/20/14.
  */
 public class FileAttachment extends ModelBase {
-	String filename;
-	Integer uploaderId;
-	Boolean thumbnailable;
-	Integer height;
-	Integer width;
-	Integer size;
-	String downloadUrl;
-	String contentType;
-	Boolean uploaded;
-	String bigUrl;
-	String thumbnailUrl;
 
-	public FileAttachment(String filename, Integer uploaderId, Boolean thumbnailable, Integer height, Integer width, Integer size, String downloadUrl, String contentType, Boolean uploaded, String bigUrl, String thumbnailUrl) {
-		this.filename = filename;
-		this.uploaderId = uploaderId;
-		this.thumbnailable = thumbnailable;
-		this.height = height;
-		this.width = width;
-		this.size = size;
-		this.downloadUrl = downloadUrl;
-		this.contentType = contentType;
-		this.uploaded = uploaded;
-		this.bigUrl = bigUrl;
-		this.thumbnailUrl = thumbnailUrl;
-	}
+  String filename;
 
-	public String getFilename() {
-		return filename;
-	}
+  Integer uploaderId;
 
-	public void setFilename(String filename) {
-		this.filename = filename;
-	}
+  Boolean thumbnailable;
 
-	public Integer getUploaderId() {
-		return uploaderId;
-	}
+  Integer height;
 
-	public void setUploaderId(Integer uploaderId) {
-		this.uploaderId = uploaderId;
-	}
+  Integer width;
 
-	public Boolean getThumbnailable() {
-		return thumbnailable;
-	}
+  Integer size;
 
-	public void setThumbnailable(Boolean thumbnailable) {
-		this.thumbnailable = thumbnailable;
-	}
+  String downloadUrl;
 
-	public Integer getHeight() {
-		return height;
-	}
+  String contentType;
 
-	public void setHeight(Integer height) {
-		this.height = height;
-	}
+  Boolean uploaded;
 
-	public Integer getWidth() {
-		return width;
-	}
+  String bigUrl;
 
-	public void setWidth(Integer width) {
-		this.width = width;
-	}
+  String thumbnailUrl;
 
-	public Integer getSize() {
-		return size;
-	}
+  public FileAttachment(String filename,
+      Integer uploaderId,
+      Boolean thumbnailable,
+      Integer height,
+      Integer width,
+      Integer size,
+      String downloadUrl,
+      String contentType,
+      Boolean uploaded,
+      String bigUrl,
+      String thumbnailUrl) {
+    this.filename = filename;
+    this.uploaderId = uploaderId;
+    this.thumbnailable = thumbnailable;
+    this.height = height;
+    this.width = width;
+    this.size = size;
+    this.downloadUrl = downloadUrl;
+    this.contentType = contentType;
+    this.uploaded = uploaded;
+    this.bigUrl = bigUrl;
+    this.thumbnailUrl = thumbnailUrl;
+  }
 
-	public void setSize(Integer size) {
-		this.size = size;
-	}
+  public String getFilename() {
+    return filename;
+  }
 
-	public String getDownloadUrl() {
-		return downloadUrl;
-	}
+  public void setFilename(String filename) {
+    this.filename = filename;
+  }
 
-	public void setDownloadUrl(String downloadUrl) {
-		this.downloadUrl = downloadUrl;
-	}
+  public Integer getUploaderId() {
+    return uploaderId;
+  }
 
-	public String getContentType() {
-		return contentType;
-	}
+  public void setUploaderId(Integer uploaderId) {
+    this.uploaderId = uploaderId;
+  }
 
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
-	}
+  public Boolean getThumbnailable() {
+    return thumbnailable;
+  }
 
-	public Boolean getUploaded() {
-		return uploaded;
-	}
+  public void setThumbnailable(Boolean thumbnailable) {
+    this.thumbnailable = thumbnailable;
+  }
 
-	public void setUploaded(Boolean uploaded) {
-		this.uploaded = uploaded;
-	}
+  public Integer getHeight() {
+    return height;
+  }
 
-	public String getBigUrl() {
-		return bigUrl;
-	}
+  public void setHeight(Integer height) {
+    this.height = height;
+  }
 
-	public void setBigUrl(String bigUrl) {
-		this.bigUrl = bigUrl;
-	}
+  public Integer getWidth() {
+    return width;
+  }
 
-	public String getThumbnailUrl() {
-		return thumbnailUrl;
-	}
+  public void setWidth(Integer width) {
+    this.width = width;
+  }
 
-	public void setThumbnailUrl(String thumbnailUrl) {
-		this.thumbnailUrl = thumbnailUrl;
-	}
+  public Integer getSize() {
+    return size;
+  }
+
+  public void setSize(Integer size) {
+    this.size = size;
+  }
+
+  public String getDownloadUrl() {
+    return downloadUrl;
+  }
+
+  public void setDownloadUrl(String downloadUrl) {
+    this.downloadUrl = downloadUrl;
+  }
+
+  public String getContentType() {
+    return contentType;
+  }
+
+  public void setContentType(String contentType) {
+    this.contentType = contentType;
+  }
+
+  public Boolean getUploaded() {
+    return uploaded;
+  }
+
+  public void setUploaded(Boolean uploaded) {
+    this.uploaded = uploaded;
+  }
+
+  public String getBigUrl() {
+    return bigUrl;
+  }
+
+  public void setBigUrl(String bigUrl) {
+    this.bigUrl = bigUrl;
+  }
+
+  public String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  public void setThumbnailUrl(String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
+  }
 }

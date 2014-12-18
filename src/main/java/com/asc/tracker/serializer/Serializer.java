@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
  */
 public interface Serializer<T> {
 
-	T read(String content);
+  T read(String content);
 
-	String write(T content) throws JsonProcessingException;
+  String write(T content) throws JsonProcessingException;
 }

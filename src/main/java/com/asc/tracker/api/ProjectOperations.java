@@ -6,7 +6,8 @@ import com.asc.tracker.model.Project;
  * Created by kachouh on 7/16/14.
  */
 public interface ProjectOperations {
-	Project getProject(String projectId);
 
-	Project updateProject(Project project);
+  Project getProject(String projectId);
+
+  Project updateProject(Project project);
 }

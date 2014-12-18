@@ -4,77 +4,90 @@ package com.asc.tracker.model;
  * Created by kachouh on 6/20/14.
  */
 public class GoogleAttachment extends ModelBase {
-	Integer commentId;
-	Integer personId;
-	String googleKind;
-	String title;
-	String googleId;
-	String alternateLink;
-	String resourceId;
 
-	public GoogleAttachment(Integer commentId, Integer personId, String googleKind, String title, String googleId, String alternateLink, String resourceId) {
-		this.commentId = commentId;
-		this.personId = personId;
-		this.googleKind = googleKind;
-		this.title = title;
-		this.googleId = googleId;
-		this.alternateLink = alternateLink;
-		this.resourceId = resourceId;
-	}
+  Integer commentId;
 
-	public Integer getCommentId() {
-		return commentId;
-	}
+  Integer personId;
 
-	public void setCommentId(Integer commentId) {
-		this.commentId = commentId;
-	}
+  String googleKind;
 
-	public Integer getPersonId() {
-		return personId;
-	}
+  String title;
 
-	public void setPersonId(Integer personId) {
-		this.personId = personId;
-	}
+  String googleId;
 
-	public String getGoogleKind() {
-		return googleKind;
-	}
+  String alternateLink;
 
-	public void setGoogleKind(String googleKind) {
-		this.googleKind = googleKind;
-	}
+  String resourceId;
 
-	public String getTitle() {
-		return title;
-	}
+  public GoogleAttachment(Integer commentId,
+      Integer personId,
+      String googleKind,
+      String title,
+      String googleId,
+      String alternateLink,
+      String resourceId) {
+    this.commentId = commentId;
+    this.personId = personId;
+    this.googleKind = googleKind;
+    this.title = title;
+    this.googleId = googleId;
+    this.alternateLink = alternateLink;
+    this.resourceId = resourceId;
+  }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+  public Integer getCommentId() {
+    return commentId;
+  }
 
-	public String getGoogleId() {
-		return googleId;
-	}
+  public void setCommentId(Integer commentId) {
+    this.commentId = commentId;
+  }
 
-	public void setGoogleId(String googleId) {
-		this.googleId = googleId;
-	}
+  public Integer getPersonId() {
+    return personId;
+  }
 
-	public String getAlternateLink() {
-		return alternateLink;
-	}
+  public void setPersonId(Integer personId) {
+    this.personId = personId;
+  }
 
-	public void setAlternateLink(String alternateLink) {
-		this.alternateLink = alternateLink;
-	}
+  public String getGoogleKind() {
+    return googleKind;
+  }
 
-	public String getResourceId() {
-		return resourceId;
-	}
+  public void setGoogleKind(String googleKind) {
+    this.googleKind = googleKind;
+  }
 
-	public void setResourceId(String resourceId) {
-		this.resourceId = resourceId;
-	}
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getGoogleId() {
+    return googleId;
+  }
+
+  public void setGoogleId(String googleId) {
+    this.googleId = googleId;
+  }
+
+  public String getAlternateLink() {
+    return alternateLink;
+  }
+
+  public void setAlternateLink(String alternateLink) {
+    this.alternateLink = alternateLink;
+  }
+
+  public String getResourceId() {
+    return resourceId;
+  }
+
+  public void setResourceId(String resourceId) {
+    this.resourceId = resourceId;
+  }
 }

@@ -1,189 +1,219 @@
-
 package com.asc.tracker.model;
-
-import com.asc.tracker.serializer.CustomDateSerializer;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@JsonInclude ( JsonInclude.Include.NON_NULL )
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.joda.time.DateTime;
+import com.asc.tracker.serializer.CustomDateSerializer;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Story extends ModelBase {
-	Integer projectId;
-	String name;
-	String description;
-	StoryType storyType;
-	CurrentState currentState;
-	BigDecimal estimate;
-	DateTime acceptedAt;
-	DateTime deadline;
-	Integer requestedById;
-	List<Integer> ownerIds;
-	List<Integer> taskIds;
-	List<Integer> followerIds;
-	List<Integer> commentIds;
-	List<Integer> labelIds;
-	Integer integrationId;
-	String externalId;
-	String url;
 
-	public Story(Integer projectId, String name, String description, StoryType storyType, CurrentState currentState, BigDecimal estimate, DateTime acceptedAt, DateTime deadline, Integer requestedById, List<Integer> ownerIds, List<Integer> taskIds, List<Integer> followerIds, List<Integer> commentIds, List<Integer> labelIds, Integer integrationId, String externalId, String url) {
-		this.projectId = projectId;
-		this.name = name;
-		this.description = description;
-		this.storyType = storyType;
-		this.currentState = currentState;
-		this.estimate = estimate;
-		this.acceptedAt = acceptedAt;
-		this.deadline = deadline;
-		this.requestedById = requestedById;
-		this.ownerIds = ownerIds;
-		this.taskIds = taskIds;
-		this.followerIds = followerIds;
-		this.commentIds = commentIds;
-		this.labelIds = labelIds;
-		this.integrationId = integrationId;
-		this.externalId = externalId;
-		this.url = url;
-	}
+  Integer projectId;
 
-	public Integer getProjectId() {
-		return projectId;
-	}
+  String name;
 
-	public void setProjectId(Integer projectId) {
-		this.projectId = projectId;
-	}
+  String description;
 
-	public String getName() {
-		return name;
-	}
+  StoryType storyType;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  CurrentState currentState;
 
-	public String getDescription() {
-		return description;
-	}
+  BigDecimal estimate;
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+  DateTime acceptedAt;
 
-	public StoryType getStoryType() {
-		return storyType;
-	}
+  DateTime deadline;
 
-	public void setStoryType(StoryType storyType) {
-		this.storyType = storyType;
-	}
+  Integer requestedById;
 
-	public CurrentState getCurrentState() {
-		return currentState;
-	}
+  List<Integer> ownerIds;
 
-	public void setCurrentState(CurrentState currentState) {
-		this.currentState = currentState;
-	}
+  List<Integer> taskIds;
 
-	public BigDecimal getEstimate() {
-		return estimate;
-	}
+  List<Integer> followerIds;
 
-	public void setEstimate(BigDecimal estimate) {
-		this.estimate = estimate;
-	}
+  List<Integer> commentIds;
 
-	@JsonSerialize(using = CustomDateSerializer.class)
-	public DateTime getAcceptedAt() {
-		return acceptedAt;
-	}
+  List<Integer> labelIds;
 
-	public void setAcceptedAt(DateTime acceptedAt) {
-		this.acceptedAt = acceptedAt;
-	}
+  Integer integrationId;
 
-	@JsonSerialize (using = CustomDateSerializer.class)
-	public DateTime getDeadline() {
-		return deadline;
-	}
+  String externalId;
 
-	public void setDeadline(DateTime deadline) {
-		this.deadline = deadline;
-	}
+  String url;
 
-	public Integer getRequestedById() {
-		return requestedById;
-	}
+  public Story(Integer projectId,
+      String name,
+      String description,
+      StoryType storyType,
+      CurrentState currentState,
+      BigDecimal estimate,
+      DateTime acceptedAt,
+      DateTime deadline,
+      Integer requestedById,
+      List<Integer> ownerIds,
+      List<Integer> taskIds,
+      List<Integer> followerIds,
+      List<Integer> commentIds,
+      List<Integer> labelIds,
+      Integer integrationId,
+      String externalId,
+      String url) {
+    this.projectId = projectId;
+    this.name = name;
+    this.description = description;
+    this.storyType = storyType;
+    this.currentState = currentState;
+    this.estimate = estimate;
+    this.acceptedAt = acceptedAt;
+    this.deadline = deadline;
+    this.requestedById = requestedById;
+    this.ownerIds = ownerIds;
+    this.taskIds = taskIds;
+    this.followerIds = followerIds;
+    this.commentIds = commentIds;
+    this.labelIds = labelIds;
+    this.integrationId = integrationId;
+    this.externalId = externalId;
+    this.url = url;
+  }
 
-	public void setRequestedById(Integer requestedById) {
-		this.requestedById = requestedById;
-	}
+  public Integer getProjectId() {
+    return projectId;
+  }
 
-	public List<Integer> getOwnerIds() {
-		return ownerIds;
-	}
+  public void setProjectId(Integer projectId) {
+    this.projectId = projectId;
+  }
 
-	public void setOwnerIds(List<Integer> ownerIds) {
-		this.ownerIds = ownerIds;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public List<Integer> getTaskIds() {
-		return taskIds;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setTaskIds(List<Integer> taskIds) {
-		this.taskIds = taskIds;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public List<Integer> getFollowerIds() {
-		return followerIds;
-	}
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-	public void setFollowerIds(List<Integer> followerIds) {
-		this.followerIds = followerIds;
-	}
+  public StoryType getStoryType() {
+    return storyType;
+  }
 
-	public List<Integer> getCommentIds() {
-		return commentIds;
-	}
+  public void setStoryType(StoryType storyType) {
+    this.storyType = storyType;
+  }
 
-	public void setCommentIds(List<Integer> commentIds) {
-		this.commentIds = commentIds;
-	}
+  public CurrentState getCurrentState() {
+    return currentState;
+  }
 
-	public Integer getIntegrationId() {
-		return integrationId;
-	}
+  public void setCurrentState(CurrentState currentState) {
+    this.currentState = currentState;
+  }
 
-	public void setIntegrationId(Integer integrationId) {
-		this.integrationId = integrationId;
-	}
+  public BigDecimal getEstimate() {
+    return estimate;
+  }
 
-	public String getExternalId() {
-		return externalId;
-	}
+  public void setEstimate(BigDecimal estimate) {
+    this.estimate = estimate;
+  }
 
-	public void setExternalId(String externalId) {
-		this.externalId = externalId;
-	}
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getAcceptedAt() {
+    return acceptedAt;
+  }
 
-	public String getUrl() {
-		return url;
-	}
+  public void setAcceptedAt(DateTime acceptedAt) {
+    this.acceptedAt = acceptedAt;
+  }
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getDeadline() {
+    return deadline;
+  }
 
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
+  public void setDeadline(DateTime deadline) {
+    this.deadline = deadline;
+  }
 
+  public Integer getRequestedById() {
+    return requestedById;
+  }
 
+  public void setRequestedById(Integer requestedById) {
+    this.requestedById = requestedById;
+  }
+
+  public List<Integer> getOwnerIds() {
+    return ownerIds;
+  }
+
+  public void setOwnerIds(List<Integer> ownerIds) {
+    this.ownerIds = ownerIds;
+  }
+
+  public List<Integer> getTaskIds() {
+    return taskIds;
+  }
+
+  public void setTaskIds(List<Integer> taskIds) {
+    this.taskIds = taskIds;
+  }
+
+  public List<Integer> getFollowerIds() {
+    return followerIds;
+  }
+
+  public void setFollowerIds(List<Integer> followerIds) {
+    this.followerIds = followerIds;
+  }
+
+  public List<Integer> getCommentIds() {
+    return commentIds;
+  }
+
+  public void setCommentIds(List<Integer> commentIds) {
+    this.commentIds = commentIds;
+  }
+
+  public Integer getIntegrationId() {
+    return integrationId;
+  }
+
+  public void setIntegrationId(Integer integrationId) {
+    this.integrationId = integrationId;
+  }
+
+  public String getExternalId() {
+    return externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(this);
+  }
 }

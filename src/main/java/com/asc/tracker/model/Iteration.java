@@ -1,88 +1,101 @@
 package com.asc.tracker.model;
 
+import java.util.List;
+
+import org.joda.time.DateTime;
 import com.asc.tracker.serializer.CustomDateSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import org.joda.time.DateTime;
-
-import java.util.List;
 
 /**
  * Created by kachouh on 6/20/14.
  */
 public class Iteration extends ModelBase {
-	Integer number;
-	Integer projectId;
-	Integer length;
-	String teamStrength;
-	List<Integer> storyIds;
-	DateTime start;
-	DateTime finish;
 
-	public Iteration(Integer number, Integer projectId, Integer length, String teamStrength, List<Integer> storyIds, DateTime start, DateTime finish) {
-		this.number = number;
-		this.projectId = projectId;
-		this.length = length;
-		this.teamStrength = teamStrength;
-		this.storyIds = storyIds;
-		this.start = start;
-		this.finish = finish;
-	}
+  Integer number;
 
-	public Integer getNumber() {
-		return number;
-	}
+  Integer projectId;
 
-	public void setNumber(Integer number) {
-		this.number = number;
-	}
+  Integer length;
 
-	public Integer getProjectId() {
-		return projectId;
-	}
+  String teamStrength;
 
-	public void setProjectId(Integer projectId) {
-		this.projectId = projectId;
-	}
+  List<Integer> storyIds;
 
-	public Integer getLength() {
-		return length;
-	}
+  DateTime start;
 
-	public void setLength(Integer length) {
-		this.length = length;
-	}
+  DateTime finish;
 
-	public String getTeamStrength() {
-		return teamStrength;
-	}
+  public Iteration(Integer number,
+      Integer projectId,
+      Integer length,
+      String teamStrength,
+      List<Integer> storyIds,
+      DateTime start,
+      DateTime finish) {
+    this.number = number;
+    this.projectId = projectId;
+    this.length = length;
+    this.teamStrength = teamStrength;
+    this.storyIds = storyIds;
+    this.start = start;
+    this.finish = finish;
+  }
 
-	public void setTeamStrength(String teamStrength) {
-		this.teamStrength = teamStrength;
-	}
+  public Integer getNumber() {
+    return number;
+  }
 
-	public List<Integer> getStoryIds() {
-		return storyIds;
-	}
+  public void setNumber(Integer number) {
+    this.number = number;
+  }
 
-	public void setStoryIds(List<Integer> storyIds) {
-		this.storyIds = storyIds;
-	}
+  public Integer getProjectId() {
+    return projectId;
+  }
 
-	@JsonSerialize (using = CustomDateSerializer.class)
-	public DateTime getStart() {
-		return start;
-	}
+  public void setProjectId(Integer projectId) {
+    this.projectId = projectId;
+  }
 
-	public void setStart(DateTime start) {
-		this.start = start;
-	}
+  public Integer getLength() {
+    return length;
+  }
 
-	@JsonSerialize(using = CustomDateSerializer.class)
-	public DateTime getFinish() {
-		return finish;
-	}
+  public void setLength(Integer length) {
+    this.length = length;
+  }
 
-	public void setFinish(DateTime finish) {
-		this.finish = finish;
-	}
+  public String getTeamStrength() {
+    return teamStrength;
+  }
+
+  public void setTeamStrength(String teamStrength) {
+    this.teamStrength = teamStrength;
+  }
+
+  public List<Integer> getStoryIds() {
+    return storyIds;
+  }
+
+  public void setStoryIds(List<Integer> storyIds) {
+    this.storyIds = storyIds;
+  }
+
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getStart() {
+    return start;
+  }
+
+  public void setStart(DateTime start) {
+    this.start = start;
+  }
+
+  @JsonSerialize(using = CustomDateSerializer.class)
+  public DateTime getFinish() {
+    return finish;
+  }
+
+  public void setFinish(DateTime finish) {
+    this.finish = finish;
+  }
 }

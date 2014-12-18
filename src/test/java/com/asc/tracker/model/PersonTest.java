@@ -1,50 +1,51 @@
 package com.asc.tracker.model;
 
-import com.asc.tracker.builders.PersonBuilder;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Before;
-import org.junit.Test;
+import static org.fest.assertions.Assertions.assertThat;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.fest.assertions.Assertions.assertThat;
+import org.junit.Before;
+import org.junit.Test;
+import com.asc.tracker.builders.PersonBuilder;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PersonTest {
 
+  public static final String NAME = "name";
 
-	public static final String NAME = "name";
-	public static final String EMAIL_EMAIL_COM = "email@email.com";
-	public static final String RK = "rk";
-	public static final String USERNAME = "username";
-	Person person;
+  public static final String EMAIL_EMAIL_COM = "email@email.com";
 
-	@Before
-	public void setup() {
+  public static final String RK = "rk";
 
-		person = new PersonBuilder()
-				.withName(NAME)
-				.withEmail(EMAIL_EMAIL_COM)
-				.withInitials(RK)
-				.withUsername(USERNAME)
-				.createPerson();
-	}
+  public static final String USERNAME = "username";
 
-	@Test
-	public void testPersonToJson() throws IOException {
-		String personJson = person.toJson();
+  Person person;
 
-		assertThat(personJson).isNotNull();
+  @Before
+  public void setup() {
 
-		Map<String, Object> result =
-				new ObjectMapper().readValue(personJson, new TypeReference<HashMap<String, Object>>() {});
+    person = new PersonBuilder().withName(NAME)
+        .withEmail(EMAIL_EMAIL_COM)
+        .withInitials(RK)
+        .withUsername(USERNAME)
+        .createPerson();
+  }
 
-		assertThat(result.get("name")).isEqualTo(NAME);
-		assertThat(result.get("email")).isEqualTo(EMAIL_EMAIL_COM);
-		assertThat(result.get("initials")).isEqualTo(RK);
-		assertThat(result.get("username")).isEqualTo(USERNAME);
-	}
+  @Test
+  public void testPersonToJson() throws IOException {
+    String personJson = person.toJson();
 
+    assertThat(personJson).isNotNull();
+
+    Map<String, Object> result = new ObjectMapper().readValue(personJson, new TypeReference<HashMap<String, Object>>() {
+    });
+
+    assertThat(result.get("name")).isEqualTo(NAME);
+    assertThat(result.get("email")).isEqualTo(EMAIL_EMAIL_COM);
+    assertThat(result.get("initials")).isEqualTo(RK);
+    assertThat(result.get("username")).isEqualTo(USERNAME);
+  }
 }

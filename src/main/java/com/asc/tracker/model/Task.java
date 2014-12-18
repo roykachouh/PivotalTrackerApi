@@ -4,47 +4,51 @@ package com.asc.tracker.model;
  * Created by kachouh on 6/20/14.
  */
 public class Task extends ModelBase {
-	Integer storyId;
-	String description;
-	Boolean complete;
-	Integer position;
 
-	public Task(Integer storyId, String description, Boolean complete, Integer position) {
-		this.storyId = storyId;
-		this.description = description;
-		this.complete = complete;
-		this.position = position;
-	}
+  Integer storyId;
 
-	public Integer getStoryId() {
-		return storyId;
-	}
+  String description;
 
-	public void setStoryId(Integer storyId) {
-		this.storyId = storyId;
-	}
+  Boolean complete;
 
-	public String getDescription() {
-		return description;
-	}
+  Integer position;
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+  public Task(Integer storyId, String description, Boolean complete, Integer position) {
+    this.storyId = storyId;
+    this.description = description;
+    this.complete = complete;
+    this.position = position;
+  }
 
-	public Boolean getComplete() {
-		return complete;
-	}
+  public Integer getStoryId() {
+    return storyId;
+  }
 
-	public void setComplete(Boolean complete) {
-		this.complete = complete;
-	}
+  public void setStoryId(Integer storyId) {
+    this.storyId = storyId;
+  }
 
-	public Integer getPosition() {
-		return position;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public void setPosition(Integer position) {
-		this.position = position;
-	}
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public Boolean getComplete() {
+    return complete;
+  }
+
+  public void setComplete(Boolean complete) {
+    this.complete = complete;
+  }
+
+  public Integer getPosition() {
+    return position;
+  }
+
+  public void setPosition(Integer position) {
+    this.position = position;
+  }
 }
